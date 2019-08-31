@@ -1,0 +1,294 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &604706734131750683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8798249213782540188}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8798249213782540188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604706734131750683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6680898899114837949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6680898899114837947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6680898899114837949}
+  - component: {fileID: 6680898899114837946}
+  - component: {fileID: 6680898899114837948}
+  - component: {fileID: 5504828089293318126}
+  - component: {fileID: 70602800}
+  - component: {fileID: 809459066}
+  - component: {fileID: 1573267855}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: GM
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6680898899114837949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680898899114837947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.07876, y: 1.244451, z: -52.54318}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8798249213782540188}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6680898899114837946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680898899114837947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ceb84d9429d27448640d6ce251e044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgrounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  smoothing: 2
+--- !u!114 &6680898899114837948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680898899114837947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a96c446ba7a7784dab7453032260de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLives: 3
+  spawnPrefab: {fileID: 8527146777563832383, guid: 575e5074c57450a449c04c15ba1981fc,
+    type: 3}
+  playerPrefab: {fileID: 8707673166811138078, guid: 13a5bc7a24ec1284498dd28116b913e9,
+    type: 3}
+  spawnPoint: {fileID: 8798249213782540188}
+  spawnDelay: 3.5
+  respawnCountdownSoundName: RespawnCountdown
+  spawnSoundName: Spawn
+  gameOverSoundName: GameOver
+  cameraShake: {fileID: 5504828089293318126}
+  startingMoney: 0
+  gameOverUI: {fileID: 0}
+  upgradeMenu: {fileID: 0}
+  waveSpawner: {fileID: 70602800}
+--- !u!114 &5504828089293318126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680898899114837947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1e9a9c370d33418b58df92a4829dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 0}
+--- !u!114 &70602800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680898899114837947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93d0069b35c06146ad8efbde668452e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: Wave0
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 2
+    rate: 1.5
+  - name: Wave1
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 2
+    rate: 2
+  - name: Wave2
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 2
+    rate: 2
+  - name: Wave3
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 3
+    rate: 2
+  - name: Wave4
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 3
+    rate: 2
+  - name: Wave5
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 4
+    rate: 2
+  - name: Wave6
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 4
+    rate: 2
+  - name: Wave7
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 5
+    rate: 2.5
+  - name: Wave8
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 5
+    rate: 2.5
+  - name: Wave9
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 5
+    rate: 3
+  - name: Wave10
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 6
+    rate: 3
+  - name: Wave11
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 6
+    rate: 3
+  - name: Wave12
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 6
+    rate: 3.5
+  - name: Wave12
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 7
+    rate: 3.5
+  - name: Wave13
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 7
+    rate: 3.5
+  - name: Wave14
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 7
+    rate: 4
+  - name: Wave15
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 8
+    rate: 4
+  - name: Wave16
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 8
+    rate: 4
+  - name: Wave17
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 9
+    rate: 4
+  - name: Wave18
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 10
+    rate: 4
+  - name: Wave19
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 11
+    rate: 4
+  - name: Wave20
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 12
+    rate: 4
+  - name: Wave21
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 13
+    rate: 4
+  - name: Wave22
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 14
+    rate: 4
+  - name: Wave23
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 15
+    rate: 4
+  - name: Wave24
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 16
+    rate: 4
+  - name: Wave25
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 17
+    rate: 4
+  - name: Wave26
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 18
+    rate: 4
+  - name: 27
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 19
+    rate: 4
+  - name: 28
+    enemy: {fileID: 143258261384469674, guid: 9a4c12db48bbd154280c38bce0a3ef6a, type: 3}
+    count: 20
+    rate: 4
+  timeBetweenWaves: 5
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &809459066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680898899114837947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec56e6da1e51cd1458322cc502f95ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthRegenRate: 2
+  damageMultiplier: 1
+--- !u!114 &1573267855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680898899114837947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743e9d5bcbcb7ea498c1a7e1c40e3602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingDamage: 10
